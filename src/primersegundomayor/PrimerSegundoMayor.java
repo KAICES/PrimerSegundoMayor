@@ -1,8 +1,15 @@
 package primersegundomayor;
+
+import java.io.PrintStream;
+import java.util.Arrays;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Cesar Ramirez ID 378938
  */
+
+
 public class PrimerSegundoMayor {
 
     public static int Maximo(int[] a){
@@ -24,17 +31,35 @@ public class PrimerSegundoMayor {
             }
         }    
     
+    /////***** funcion para elevar a la 2 los numeros del array ***********
+    
+        public static int[] multiplicar (int [] enteros){
+            
+        int [] r = new int [enteros.length ];
+        
+ 
+        for ( int i = 0; i < enteros.length ; i++){
+                int mul = enteros[i] * enteros[i];
+                r[i] = mul ;   
+                       
+            }
+           return r ;
+        }
+    
+    
+    
+    
     
     public static void main(String[] args) {
      
         int[]enteros ={1,4,8,3,5,1,7,9};
         
         
-        int[]enterosDos = {1,4,8,3,5,1,7,9};
-        
-        System.out.println("Primer numero mayor = " + Maximo(enteros));
+        System.out.println("Primer numero mayor = " + Maximo(enteros));        
+        System.out.println("Numero elevados a la 2 = " + Arrays.toString(multiplicar(enteros)));
 
     }
+
     
     
 }
