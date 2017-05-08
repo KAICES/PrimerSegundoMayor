@@ -2,6 +2,7 @@ package primersegundomayor;
 
 import java.io.PrintStream;
 import java.util.Arrays;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 /**
  *
@@ -39,25 +40,35 @@ public class PrimerSegundoMayor {
     
     public static void main(String[] args) {
      
-        int[]enteros ={1,4,8,3,5,1,7,9};
-        int[]enteros2 = new int [enteros.length ];
         
- 
-        for ( int i = 0; i < enteros.length ; i++){
-                int mul = enteros[i] * enteros[i];
-                enteros2[i] = mul ;   
+        int num, nEnteros;
+	Scanner leer = new Scanner(System.in);	
+        System.out.print("Cuantos numeros quiere ingresar ? : ");
+        nEnteros = leer.nextInt();        
+             
+        
+        int[]enteros =new int [nEnteros];
+        for (int i = 0; i < nEnteros - 1 ; i++)
+	    {    
+                System.out.print("Digite el numero a ingresar ");
+                num = leer.nextInt();
+                enteros[i] =leer.nextInt();         
+            }
+            
+        int[]enteros2 = new int [enteros.length ];
+        for ( int j = 0; j < enteros.length ; j++){
+                int mul = enteros[j] * enteros[j];
+                enteros2[j] = mul ;   
                        
             } 
-                
+        System.out.println("************************************************************************");
+        System.out.println("Numeros del array = " + Arrays.toString(enteros));
         System.out.println("Primer numero mayor = " + Maximo(enteros)); 
-        System.out.println("Segundo numero mayor = " + Minimo(enteros));  
+        System.out.println("Segundo numero mayor = " + Minimo(enteros));
+        System.out.println("************************************************************************");
         System.out.println("Numero elevados a la 2 = " + Arrays.toString(enteros2));
         System.out.println("Primer numero elevado a la 2 = " + Maximo(enteros2));
         System.out.println("Segundo numero mayor elevado a la 2 = " + Minimo(enteros2));
 
     }
-
-    
-    
 }
-
