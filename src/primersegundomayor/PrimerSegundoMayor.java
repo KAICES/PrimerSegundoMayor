@@ -48,10 +48,8 @@ public class PrimerSegundoMayor {
              
         
         int[]enteros =new int [nEnteros];
-        for (int i = 0; i < nEnteros - 1 ; i++)
-	    {    
-                System.out.print("Digite el numero a ingresar ");
-                num = leer.nextInt();
+        for (int i = 0; i < enteros.length ; i++){    
+                System.out.print("Digite el numero a ingresar \n");
                 enteros[i] =leer.nextInt();         
             }
             
